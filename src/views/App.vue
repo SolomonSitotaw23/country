@@ -50,7 +50,7 @@ const NoState = "there are no states";
           </span>
 
           <h1 class="text-white text-center text-4xl">
-            <span class="underline px-6 py-4"> {{ country.name }} </span>
+            <span class="underline px-6 py-4 "> {{ country.name }} </span
           </h1>
           <p class="mt-2">
             <span> <b>Continent: </b> </span>{{ country.continent.name }}
@@ -74,10 +74,7 @@ const NoState = "there are no states";
             class="focus:outline-none flex w-full justify-between rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 border px-4 py-2 text-left text-sm font-medium hover:bg-purple-200 focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
           >
             <span> <b>Languages: </b></span>
-            <ChevronUpIcon
-              :class="open ? 'rotate-180 transform' : ''"
-              class="h-5 w-5"
-            />
+            <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5" />
           </DisclosureButton>
           <DisclosurePanel class="px-4 pt-4 pb-2 text-sm">
             <span v-for="language in country.languages" :key="language.name">
